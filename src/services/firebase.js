@@ -1,13 +1,16 @@
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, set, get, update  } from "firebase/database";
+import { config } from "dotenv";
+config()
+
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB4FN6HpF1sWM9jkeGzjAqeMQKxPpYhb60",
-  authDomain: "tax-id-backend.firebaseapp.com",
-  projectId: "tax-id-backend",
-  storageBucket: "tax-id-backend.appspot.com",
-  messagingSenderId: "375579102479",
-  appId: "1:375579102479:web:aa13c2222d8e6f364a427a"
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID
 };
 
 
